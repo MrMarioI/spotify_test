@@ -1,0 +1,25 @@
+.login{
+    min-height: 100vh;
+  display: flex;
+  color: #1DB954;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  background-color: #191414;
+ padding: 20%
+}
+
+p{
+    padding: 30px
+}
+
+a{
+    border: 3px dotted #1DB954;
+    border-radius: 30px;
+    padding: 10px;
+    width: 160px;
+    color: #1DB954;
+    text-decoration: none;  
+}
