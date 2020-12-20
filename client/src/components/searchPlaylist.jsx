@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import { useStateValue } from '../stateProvider';
-import ButtonDisplay from './buttonDisplay'
 import './../App.css';
 
 const SearchPlaylist = (props) => {
@@ -10,9 +9,11 @@ const SearchPlaylist = (props) => {
 
 
 	const dropdownChanged = (e) => {
-		setCurrentPlaylist(e.target.value);
+        setCurrentPlaylist(e.target.value);
     };
     
+    console.log("TEST ICI", currentPlaylist);
+
     const displayPlaylist = () =>{
         setDisplayMusic(currentPlaylist);
         console.log("HEY HEY HEY", displayMusic);
@@ -28,8 +29,12 @@ const SearchPlaylist = (props) => {
                 {playlists && playlists.items && playlists.items.length && playlists.items.map((item, idx) =>
                  {return <option key={idx + 1} value={item.id}>{item.name}</option>})}
 			</select>
-            <ButtonDisplay {...props}/>
-            <button className="test" onSubmit={displayPlaylist} ></button>
+            <div className="box col-sm-6 px-0">
+				<div className="list-group">
+				{playlists && playlists.items && playlists.items.length && playlists.items.map((item, idx) =>
+                 {return <li key={idx + 1} value={item.id}>{item.name}</li>})}
+				</div>
+			</div>
 		</div>
 	);
 };

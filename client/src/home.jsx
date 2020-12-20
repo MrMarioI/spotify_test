@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ButtonDisplay from './components/buttonDisplay'
-import Playlist from './components/playlist'
 import Login from './components/login'
 import SpotifyWebApi from "spotify-web-api-js";
 import SearchPlaylist from './components/searchPlaylist'
@@ -20,7 +18,6 @@ function Home() {
     <h1 className="title">Spotify Test</h1>
     <p className="playlist">Vos playlists</p>
     <SearchPlaylist className="search"/>
-    <Playlist />
   </div>
   );
 }
