@@ -11,3 +11,5 @@
 7. `npm start`
 
 ## You are ready to make the evaluation
+
+Ce projet vous permettera d'afficher vos playlists après connexion à Spotify avec vos identifiants. 
